@@ -1,0 +1,26 @@
+.cart-section{
+    overflow:hidden;
+}
+.cartTotal{
+    margin: 20px 10px ;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+.cartContainer{
+    padding: 50px;
+    /* background-color: red; */
+    
+}
+.cartBox{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 100px ;
+    margin: 10px;
+    box-shadow:0 0px 5px 5px rgba(0,0,0,0.2);
+}
