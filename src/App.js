@@ -2,19 +2,24 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './container/Home';
 import CardDetailsPage from './container/CardDetailsPage'
-import { Navbar } from './component/Navbar';
+import ProtectedRoute from './ProtectedRoute';
 import Cart from './container/Cart';
-
-
+import Contact from "./container/Contact";
+import LoginPage from './LoginPage';
+import Signup from './Signup';
 function App() {
   return (
     <div className="App">
-     <Navbar />
+      
+    
         <Routes>
-          
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="products/:id" element={<CardDetailsPage />} />
+          <Route path="/" element={<LoginPage />} />
+          <Route path='/signup'element={<Signup />} />
+          <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+          <Route path="products/:id" element={<ProtectedRoute><CardDetailsPage /></ProtectedRoute>} />
+          <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
+
         </Routes>
      
       

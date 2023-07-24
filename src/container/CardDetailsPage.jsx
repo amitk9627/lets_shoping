@@ -1,6 +1,8 @@
 import { Container, Typography, Button } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react';
 import Rating from '@mui/material/Rating';
+import {Navbar }from "../component/Navbar"
+
 import { useParams } from 'react-router';
 import { ContextState } from '../context/Context';
 import Loading from '../Loading';
@@ -31,6 +33,7 @@ const CardDetailsPage = () => {
   // console.log(product);
   return (
     <>
+    <Navbar />
     {loading ? <Loading /> :
     <Container md={6} sx={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", mt: 5 }}>
 

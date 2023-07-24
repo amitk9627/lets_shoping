@@ -57,8 +57,8 @@ const CardList = ({ prodData }) => {
                     />
                 </NavLink>
                 <CardContent>
-                    <Typography variant="h5" component="div" color="text.secondary">
-                        {(prodData.title).slice(0, 20)}
+                    <Typography variant="h5" component="div" color="text.secondary" >
+                        {(prodData.title).slice(0, 15)}
                     </Typography>
 
                 </CardContent>

@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import CardList from '../component/CardList';
 import { Container, Grid } from '@mui/material';
+import {Navbar }from "../component/Navbar"
 import Loading from '../Loading';
+import {useUserAuth} from '../context/UserAuthContext'
 const Home = () => {
+
   const [productData, setProductData] = useState([]);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     setLoading(true);
     fetch('https://fakestoreapi.com/products')
@@ -16,8 +20,14 @@ const Home = () => {
 
   }, []);
 
-  return (
+  const {user,logOut}=useUserAuth();
+
+  return (<>
+  <Navbar />
+  
     <Container >
+      <button onClick={logOut}>LogOut</button>
+      <p></p>
       {
         loading ? <Loading /> :
           <Grid container sx={{ mt: '20px' }}>
@@ -29,6 +39,7 @@ const Home = () => {
           </Grid>
       }
     </Container >
+    </>
   )
 }
 
