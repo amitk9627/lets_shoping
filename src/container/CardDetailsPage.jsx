@@ -43,10 +43,10 @@ const CardDetailsPage = () => {
 
       <Container md={12} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
 
-        <Typography variant='h5' color='text.secondary'>
+        <Typography  color='text.secondary'>
          <u> {product.title}</u>
         </Typography>
-        <Typography variant='h5'>
+        <Typography >
           <Rating name="read-only" value={ratingValue} readOnly />
         </Typography>
 
@@ -64,7 +64,7 @@ const CardDetailsPage = () => {
         </Typography>
 
         <Typography variant="body1" sx={{textAlign:"justify"}}>
-          <Typography variant='h5'>Description : </Typography>
+          <Typography>Description : </Typography>
           {product.description}
         </Typography>
 

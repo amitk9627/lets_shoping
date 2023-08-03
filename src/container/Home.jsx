@@ -27,6 +27,7 @@ const Home = () => {
       })
 
   }, []);
+
   const searchProduct = (inputValue) => {
     setLoading(true);
     const result = productData.filter((item) => item.title.toLowerCase().includes(inputValue.toLowerCase()));
@@ -34,8 +35,8 @@ const Home = () => {
     setProductData(result);
     setLoading(false);
    
-
   }
+
   useEffect(() => {
     if (inputValue) {
       setTimeout(() => {
@@ -54,12 +55,7 @@ const Home = () => {
     }
 
 
-  }, [inputValue])
-
-
-
-
-
+  },[inputValue])
 
 
   return (
