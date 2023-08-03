@@ -36,14 +36,7 @@ title
 
 
 const CardList = ({ prodData }) => {
-    // const navigate=useNavigate();
-    // const handleClick=()=>{
-    //     console.log(prodData);
-
-    // }
-
-
-
+   
     return (
 
         <Grid item md={3} sm={6} xs={12} sx={{ mb: "20px" }}>

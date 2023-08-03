@@ -6,13 +6,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Context } from './context/Context';
 import { UserAuthContextProvider } from "./context/UserAuthContext"
+import InputContext from './context/InputContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
         <UserAuthContextProvider>
             <Context>
-                <App />
+                <InputContext>
+                    <App />
+                </InputContext>
             </Context>
         </UserAuthContextProvider>
     </BrowserRouter>

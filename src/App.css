@@ -1,8 +1,9 @@
-.cart-section{
-    overflow:hidden;
+.cart-section {
+    overflow: hidden;
 }
-.cartTotal{
-    margin: 20px 10px ;
+
+.cartTotal {
+    margin: 20px 10px;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
@@ -10,17 +11,121 @@
     font-size: 1.5rem;
     border-radius: 10px;
 }
-.cartContainer{
+
+.cartContainer {
     padding: 50px;
     /* background-color: red; */
-    
+
 }
-.cartBox{
+
+.cartBox {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px 100px ;
+    padding: 10px 100px;
     margin: 10px;
-    box-shadow:0 0px 5px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    background-color: #222123;
+    color: white;
+}
+.navbar .logo{
+    font-size: 1.5rem;
+   
+}
+.navbar nav {
+   gap: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+}
+
+.navlink {
+   
+}
+.link{
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+.cartLogo{
+   
+    padding:0 15px;
+    font-size: 2.5rem;
+}
+.active{
+    color: rgb(81, 235, 81);
+}
+.profile{
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+.profileImage{
+    border-radius: 50%;
+    border: none;
+    background:red;height:40px;
+     width:40px;
+}
+/* profile-page */
+.profile-wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 5px 100px 5px rgba(0,0,0,0.7);
+  
+    padding: 20px 40px;
+}
+.profile-image{
+    text-align: center;
+   
+    padding: 20px;
+}
+.profile-image>img{
+    border-radius: 50%;
+}
+.profile-image>p{
+    font-size: 2rem;
+}
+.profile-data{
+    text-align:left;
+    font-size: 1.5rem;
+}
+.hrStyle{
+    height:2px;
+    border-width:0;
+    width: 70%;
+    color:rgb(219, 60, 60);
+    background-color:rgb(31, 31, 31);
+}
+.profile-Button{
+    padding: 1px;
+    text-align: center;
+}
+.logout-Button{
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(219, 115, 18);
+    width: 50%;
+}
+.logout-Button:hover{
+    background-color: rgba(253, 29, 29,0.9);
 }

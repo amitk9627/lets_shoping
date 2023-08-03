@@ -26,7 +26,8 @@ const SignIn = () => {
     const handleGoogle = async (e) => {
         e.preventDefault();
         try {
-            await googleSignIn();
+           await googleSignIn();
+           
             navigate("/home");
         } catch (err) {
             setError(err.message);
@@ -65,7 +66,9 @@ const SignIn = () => {
                     </div>
 
                     <div style={{ margin: "20px 0", textAlign: "center" }}>
-                        <button style={{ minWidth: "250px", minHeight: "40px" }}
+                        <button
+                        style={{ padding: "10px 0", border: "0", borderRadius: "3px", minWidth: "250px", minHeight: "30px", fontSize: "1.3rem", color: '#fff', background: "rgb(53, 98, 223)", }}
+                         
                             type='submit'
                         >
                             Sign up
@@ -76,7 +79,8 @@ const SignIn = () => {
                     <div style={{ margin: "20px 0", textAlign: "center" }}>
                         <button 
                         onClick={handleGoogle}
-                            style={{ minWidth: "250px", minHeight: "40px" }}
+                            style={{ padding: "10px 0", border: "0", borderRadius: "3px", minWidth: "250px", minHeight: "30px", fontSize: "1.3rem", color: '#fff', background: "rgb(53, 98, 223)", }}
+                          
                         >
                             Sign up with Google
                         </button>

@@ -21,11 +21,10 @@ const LoginPage = () => {
 
     }
 
-
     return (
         <div style={{ display: "grid", justifyContent: "center", alignItems: "center", width: "100vw", height: "100vh" }}>
 
-            <div style={{ border: "1px solid #000", display: "flex", flexFlow: "column", alignItems: "center", padding: "10px" }}>
+            <div style={{ background: "rgba(0,0,0,0.05)",border: "1px solid #000",borderRadius:"5px", display: "flex", flexFlow: "column", alignItems: "center", padding: "10px" }}>
                 {error && <p style={{ background: "#ffeeed", color: "red" }}>{error}</p>}
                 <form onSubmit={handleLogin}>
                     <h1>Login</h1>
@@ -58,7 +57,7 @@ const LoginPage = () => {
 
                 </form>
 
-                <div style={{ textAlign: "center", padding: "10px 35px", border: "1px solid black" }}>New User <NavLink to="/signup"> Register Now</NavLink></div>
+                <div style={{ textAlign: "center", padding: "10px 35px", border: "1px solid black" }}>New User ?<NavLink to="/signup"> Register Now</NavLink></div>
 
 
             </div>
