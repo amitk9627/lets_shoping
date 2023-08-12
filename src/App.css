@@ -129,3 +129,11 @@
 .logout-Button:hover{
     background-color: rgba(253, 29, 29,0.9);
 }
+.emptyBtn{
+    position:absolute;
+    right: 20px;
+    background-color: red !important;
+    color: #fff;
+    border-radius:8px;
+    padding: 4px;
+}

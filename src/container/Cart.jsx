@@ -5,7 +5,10 @@ import {AiFillDelete} from 'react-icons/ai'
 
 const Cart = () => {
   const { state,dispatch } = useContext(ContextState);
+ 
  // console.log(state)
+ const totalSum=state.reduce((prev,curr)=>prev+ curr.price,0);
+ 
  
  
   return (
@@ -14,20 +17,20 @@ const Cart = () => {
     <div className='cart-section'>
       <div className='cartTotal'>
         <div>Total Amount</div>
-        {/* <div>$ {totalSum}</div> */}
+        <div>$ {Math.ceil(totalSum)}</div>
       </div>
-      {state.length>0  ? <button onClick={()=>dispatch({type:"Reset"})}>Empty</button>: ""}
-       {state.length===0 ? <h1 style={{textAlign:"center"}}>Cart is Empty</h1> : ""}
+      {state.length>0  ? <button onClick={()=>dispatch({type:"Reset"})} className='emptyBtn'>Empty</button>: ""}
+       {state.length=== 0 ? <h1 style={{textAlign:"center"}}>Cart is Empty</h1> : ""}
 
       <div className='cartContainer'>
         {state.map((item,i) => <div className='cartBox' key={i}>
          
           
-          <div><img src={item.payload.image} height="60px" width="50px" alt={item.payload.title} /></div>
-          <div>{(item.payload.title).slice(0,25)}</div>
-          <div>$ {item.payload.price}</div>
+          <div><img src={item.image} height="60px" width="50px" alt={item.title} /></div>
+          <div>{(item.title).slice(0,25)}</div>
+          <div>$ {item.price}</div>
           <div> {item?.count}</div>
-          {/* <button onClick={()=>dispatch({type:"DeleteItem",payload:item.payload.id})}><AiFillDelete /></button> */}
+          <button onClick={()=>dispatch({type:"DeleteItem",payload:item.id})}><AiFillDelete /></button>
          
         </div>)
         }

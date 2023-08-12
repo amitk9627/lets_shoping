@@ -8,25 +8,8 @@ export const Context = ({ children }) => {
     switch (action.type) {
       // add item
       case "AddToCart":
-        let count = 1;
-        let updateArray = state.find((item) => item.payload.id === action.payload.id);
-        
-        if(updateArray) {
-           
-          updateArray.count=updateArray.count+1;
-          // console.log(updateArray)
-
-        }else{
-          return ([...state, { count: count, payload: action.payload }]);
-        }
        
-        // if (updateArray) {
-        //   console.log("repeat");
-        //   count = count + 1;
-        //   return ([...state, { count: count, payload: action.payload }]);
-        // } else {
-          
-        // }
+          return ([...state,   action.payload ]);
       // delete item
       case "DeleteItem":
         return (state.filter((item,i) => item.id !== action.payload));

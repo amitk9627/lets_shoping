@@ -7,9 +7,10 @@ import { useUserAuth } from '../context/UserAuthContext'
 
 
 export const Navbar = () => {
-  const {user}=useUserAuth();
+  const { user } = useUserAuth();
 
   const { state } = useContext(ContextState);
+  // console.log(state.length);
   return (
     <div className='navbar'>
       <div className='logo'>Lets Shop</div>
@@ -20,16 +21,18 @@ export const Navbar = () => {
         <div className='navlink' >
           <NavLink to="/cart" className="link cartLogo" style={{ position: "relative" }}>
             <AiOutlineShoppingCart />
-            {state.length !== 0 && <span
-              style={{ fontSize: "1rem", fontWeight: "700", position: "absolute", top: "1px", right: "10px", background: "orange", borderRadius: "50%", padding: "5px", color: "black" }}>
-              {state.length}
-            </span>
+            {
+              state.length >= 1 && <span
+                style={{ fontSize: "1rem", fontWeight: "700", position: "absolute", top: "1px", right: "10px", background: "orange", borderRadius: "50%", padding: "5px", color: "black" }}>
+                {state?.length}
+              </span>
             }
-          </NavLink></div>
+          </NavLink>
+        </div>
         <div>
           <NavLink to="/profile">
             <div className='profile'>
-              <img src={user?.photoURL} alt=""  className='profileImage' />
+              <img src={user?.photoURL} alt="" className='profileImage' />
             </div>
           </NavLink>
         </div>
